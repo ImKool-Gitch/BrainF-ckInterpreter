@@ -2,7 +2,7 @@
 
 int main(int argc, char** argv) {
     if (argc <= 1) {
-        printf("Enter a filename which contains brainfuck code\n");
+        fprintf(stderr, "Enter a filename which contains brainfuck code\n");
         return -1;
     }
     
