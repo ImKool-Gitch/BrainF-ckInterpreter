@@ -1,8 +1,13 @@
 #include <stdio.h>
 
 int main(int argc, char** argv) {
+    if (argc <= 1) {
+        printf("Enter a filename which contains brainfuck code\n");
+        return -1;
+    }
+    
     FILE* bf_file = fopen(argv[1], "r");
-    fseek(bf_file, 0, SEEK_END)
+    fseek(bf_file, 0, SEEK_END);
     
     long int size = ftell(bf_file);
     char tape[30000] = {0};
